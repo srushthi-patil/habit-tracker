@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 7%;
+    --foreground: 220 15% 92%;
+
+    --card: 230 22% 10%;
+    --card-foreground: 220 15% 92%;
+
+    --popover: 230 25% 9%;
+    --popover-foreground: 220 15% 92%;
+
+    --primary: 270 90% 65%;
+    --primary-foreground: 230 25% 7%;
+
+    --secondary: 230 18% 16%;
+    --secondary-foreground: 220 15% 92%;
+
+    --muted: 230 18% 14%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 270 70% 25%;
+    --accent-foreground: 220 15% 92%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 220 15% 95%;
+
+    --border: 230 20% 18%;
+    --input: 230 20% 18%;
+    --ring: 270 90% 65%;
+
+    --radius: 0.75rem;
+
+    /* Habit accent colors */
+    --habit-rose: 350 80% 65%;
+    --habit-violet: 270 85% 70%;
+    --habit-sky: 200 90% 65%;
+    --habit-pink: 320 80% 70%;
+    --habit-emerald: 150 65% 55%;
+    --habit-coral: 10 85% 65%;
+    --habit-amber: 38 95% 60%;
+
+    /* Week group tints */
+    --week-1: 350 70% 55%;
+    --week-2: 270 70% 60%;
+    --week-3: 200 75% 55%;
+    --week-4: 150 60% 50%;
+    --week-5: 38 90% 55%;
+
+    /* Efficiency thresholds */
+    --eff-low: 0 75% 65%;
+    --eff-mid: 45 95% 60%;
+    --eff-high: 145 70% 55%;
+
+    --shadow-card: 0 8px 30px -12px hsl(230 50% 2% / 0.6);
+    --shadow-glow: 0 0 24px -4px hsl(var(--primary) / 0.45);
+  }
+
+  .light {
+    --background: 220 30% 97%;
+    --foreground: 230 25% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 230 25% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 25% 12%;
+    --primary: 270 80% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 20% 92%;
+    --secondary-foreground: 230 25% 12%;
+    --muted: 220 20% 94%;
+    --muted-foreground: 230 10% 40%;
+    --accent: 270 80% 92%;
+    --accent-foreground: 270 80% 30%;
+    --border: 220 20% 88%;
+    --input: 220 20% 88%;
+    --ring: 270 80% 55%;
+    --shadow-card: 0 8px 30px -12px hsl(230 30% 50% / 0.18);
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+@layer components {
+  .ht-cell {
+    @apply h-7 w-7 rounded-md border-2 transition-all duration-150 flex items-center justify-center
+           hover:scale-110 active:scale-95 cursor-pointer;
+  }
+  .ht-cell-disabled {
+    @apply opacity-25 cursor-not-allowed hover:scale-100;
+  }
+  .ht-card {
+    @apply bg-card border border-border rounded-xl;
+    box-shadow: var(--shadow-card);
+  }
+}
