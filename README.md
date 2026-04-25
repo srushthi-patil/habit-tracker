@@ -1,3 +1,4 @@
-# Welcome to your Lovable project
+# Habit Tracker Web App
 
-TODO: Document your project here
+Live Demo: https://habit-tracker-srushthi.vercel.app/
+
