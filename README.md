@@ -60,9 +60,7 @@ It focuses on simplicity, performance, and motivation — without requiring acco
 - Vercel (Deployment)
 ---
 
-## 📂 Project Structure
 
----
 
 ## 🚀 Run Locally
 -
@@ -111,6 +109,3 @@ If you found this project useful:
 
 ---
 
-If you want next upgrade:
-- 📸 :contentReference[oaicite:0]{index=0}
-- 🎥 or :contentReference[oaicite:1]{index=1}
